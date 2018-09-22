@@ -2,9 +2,8 @@
   "name": "is-peer-pad-fast-yet-pinner-zeit",
   "version": "1.0.0",
   "description": "Deploy pinner to Zeit",
-  "main": "index.js",
   "scripts": {
-    "start": "is-peer-pad-fast-yet-pinner peer-star-demo /dns4/rendezvous.jimpick.com/tcp/9091/wss/p2p-websocket-star",
+    "start": "node ./index.js peer-star-demo /dns4/rendezvous.jimpick.com/tcp/9091/wss/p2p-websocket-star",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
