@@ -3,9 +3,11 @@
 
 const http = require('http')
 
+/*
 if (!process.env.DEBUG) {
   process.env.DEBUG = 'peer-star:pinner'
 }
+*/
 
 const Pinner = require('@jimpick/is-peer-pad-fast-yet-pinner/src/pinner')
 
