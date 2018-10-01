@@ -27,7 +27,7 @@ if (swarm) {
       '/dns4/ipfs.jimpick.com/tcp/9092/wss/ipfs/QmScdku7gc3VvfZZvT8kHU77bt6bnH3PnGXkyFRZ17g9EG'
     ],
     transport: {
-      maxThrottleDelayMS: 2 * 60 * 1000 // 2 minutes
+      maxThrottleDelayMS: 10 * 1000 // 10 seconds
     }
   }
 }
