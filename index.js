@@ -32,6 +32,11 @@ if (swarm) {
   }
 }
 
+setTimeout(() => {
+  console.log('Shutting down')
+  process.exit(0)
+}, (10 + Math.random(2)) * 60 * 1000)
+
 console.log('pinning app %s', appName)
 
 process.on('unhandledRejection', (err) => {

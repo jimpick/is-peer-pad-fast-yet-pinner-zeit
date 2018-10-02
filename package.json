@@ -10,6 +10,6 @@
   "author": "Jim Pick (@jimpick)",
   "license": "MIT",
   "dependencies": {
-    "@jimpick/is-peer-pad-fast-yet-pinner": "^0.7.0-6"
+    "@jimpick/is-peer-pad-fast-yet-pinner": "^0.7.0-7"
   }
 }
