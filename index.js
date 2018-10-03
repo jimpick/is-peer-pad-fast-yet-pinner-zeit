@@ -9,6 +9,8 @@ if (!process.env.DEBUG) {
 }
 */
 
+let id
+
 const Pinner = require('@jimpick/is-peer-pad-fast-yet-pinner/src/pinner')
 
 const appName = process.argv[2]
@@ -33,9 +35,9 @@ if (swarm) {
 }
 
 setTimeout(() => {
-  console.log('Shutting down')
+  console.log('Shutting down', id, process.env['NOW_DC'])
   process.exit(0)
-}, (10 + Math.random(2)) * 60 * 1000)
+}, (20 + Math.random(2)) * 60 * 1000)
 
 console.log('pinning app %s', appName)
 
@@ -46,6 +48,7 @@ process.on('unhandledRejection', (err) => {
 const pinner = Pinner(appName, options)
 pinner.start().then(() => {
   pinner.ipfs.id().then((peerInfo) => {
+    id = peerInfo.id
     console.log('Peer Id:', peerInfo.id)
     if (process.env['NOW_DC']) {
       console.log('Zeit now datacenter:', process.env['NOW_DC'])
