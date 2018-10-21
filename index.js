@@ -3,15 +3,13 @@
 
 const http = require('http')
 
-/*
 if (!process.env.DEBUG) {
   process.env.DEBUG = 'peer-star:pinner'
 }
-*/
 
 let id
 
-const Pinner = require('@jimpick/is-peer-pad-fast-yet-pinner/src/pinner')
+const Pinner = require('@jimpick/peer-star-app/src/pinner')
 
 const appName = process.argv[2]
 if (!appName) {
