@@ -3,9 +3,11 @@
 
 const http = require('http')
 
+/*
 if (!process.env.DEBUG) {
   process.env.DEBUG = 'peer-star:pinner'
 }
+*/
 
 let id
 
@@ -20,7 +22,7 @@ const options = {}
 
 const swarm = process.argv[3]
 if (swarm) {
-  console.log('using swarm address %j', swarm)
+  console.log('using swarm address', swarm)
   options.ipfs = {
     swarm: [swarm],
     bootstrap: [
@@ -58,7 +60,7 @@ pinner.start().then(() => {
 // Just to keep Zeit now from complaining
 
 const hostname = '127.0.0.1'
-const port = 3000
+const port = 3010
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200
