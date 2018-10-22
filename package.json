@@ -4,12 +4,13 @@
   "description": "Deploy pinner to Zeit",
   "scripts": {
     "start": "node ./index.js peer-star-demo /dns4/rendezvous.jimpick.com/tcp/9091/wss/p2p-websocket-star",
+    "start:dev": "node ./index.js peer-star-dev /dns4/rendezvous.jimpick.com/tcp/9093/wss/p2p-websocket-star",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Jim Pick (@jimpick)",
   "license": "MIT",
   "dependencies": {
-    "@jimpick/peer-star-app": "^0.8.0-4"
+    "@jimpick/peer-star-app": "^0.8.0-5"
   }
 }
