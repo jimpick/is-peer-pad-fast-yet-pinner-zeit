@@ -1,6 +1,6 @@
 #! /bin/bash
 
-SLEEP=10
+SLEEP=300
 while true; do
   for f in `ls head-cid.*.txt`; do
     CID=$(cat $f)
