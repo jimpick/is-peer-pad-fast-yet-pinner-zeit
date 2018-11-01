@@ -11,6 +11,9 @@
   "author": "Jim Pick (@jimpick)",
   "license": "MIT",
   "dependencies": {
-    "@jimpick/peer-star-app": "^0.9.1-2"
+    "@jimpick/peer-star-app": "^0.9.1-3"
+  },
+  "engines": {
+    "node": "^10.7.0"
   }
 }
