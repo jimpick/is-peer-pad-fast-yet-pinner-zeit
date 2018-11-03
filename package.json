@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Deploy pinner to Zeit",
   "scripts": {
-    "start": "node ./index.js peer-star-demo /dns4/rendezvous.jimpick.com/tcp/9091/wss/p2p-websocket-star",
+    "start": "node ./index.js peer-star-demo-2 /dns4/rendezvous.jimpick.com/tcp/9091/wss/p2p-websocket-star",
     "start:dev": "node ./index.js peer-star-dev /dns4/rendezvous.jimpick.com/tcp/9093/wss/p2p-websocket-star",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
