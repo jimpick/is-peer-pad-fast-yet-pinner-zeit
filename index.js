@@ -1,6 +1,16 @@
 #!/usr/bin/env node
 'use strict'
 
+// Evil hack
+const fs = require('fs')
+fs.writeFileSync(
+  'node_modules/libp2p-floodsub/src/index.js',
+  fs.readFileSync(
+    'node_modules/\@jimpick/libp2p-floodsub/src/index.js',
+    'utf8'
+  )
+)
+
 const http = require('http')
 
 /*
