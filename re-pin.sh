@@ -8,7 +8,7 @@ while true; do
     ipfs pin add -r $CID
   done
   cp head-cid.*.txt backup
-  (cd backup; git add .; git commit -m backup)
+  (cd backup; git add .; git commit -m backup; git push)
   echo Sleeping for $SLEEP seconds
   sleep $SLEEP
 done
