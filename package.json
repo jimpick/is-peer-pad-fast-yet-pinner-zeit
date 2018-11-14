@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Deploy pinner to Zeit",
   "scripts": {
-    "start": "pinner peer-pad-jim-staging /dns4/rendezvous.jimpick.com/tcp/9093/wss/p2p-websocket-star"
+    "start": "node ./pinner peer-pad-jim-staging /dns4/rendezvous.jimpick.com/tcp/9093/wss/p2p-websocket-star"
   },
   "keywords": [],
   "author": "Jim Pick (@jimpick)",

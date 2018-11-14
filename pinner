@@ -1,17 +1,11 @@
 #!/usr/bin/env node
 'use strict'
 
-const http = require('http')
-
-/*
 if (!process.env.DEBUG) {
   process.env.DEBUG = 'peer-star:pinner'
 }
-*/
 
-let id
-
-const Pinner = require('@jimpick/peer-star-app/src/pinner')
+const Pinner = require('peer-star-app/src/pinner')
 
 const appName = process.argv[2]
 if (!appName) {
@@ -22,44 +16,25 @@ const options = {}
 
 const swarm = process.argv[3]
 if (swarm) {
-  console.log('using swarm address', swarm)
+  console.log('using swarm address %j', swarm)
   options.ipfs = {
-    swarm: [swarm],
-    bootstrap: [
-      '/dns4/ipfs.jimpick.com/tcp/9092/wss/ipfs/QmScdku7gc3VvfZZvT8kHU77bt6bnH3PnGXkyFRZ17g9EG'
-    ],
-    transport: {
-      maxThrottleDelayMS: 10 * 1000 // 10 seconds
-    }
+    swarm: [swarm]
   }
 }
-
-setTimeout(() => {
-  console.log('Shutting down', id, process.env['NOW_DC'])
-  process.exit(0)
-}, (20 + Math.random(2)) * 60 * 1000)
 
 console.log('pinning app %s', appName)
 
 process.on('unhandledRejection', (err) => {
   console.error(err)
-  console.error(err.stack)
-  process.exit(1)
 })
 
 const pinner = Pinner(appName, options)
-pinner.start().then(() => {
-  pinner.ipfs.id().then((peerInfo) => {
-    id = peerInfo.id
-    console.log('Peer Id:', peerInfo.id)
-    if (process.env['NOW_DC']) {
-      console.log('Zeit now datacenter:', process.env['NOW_DC'])
-    }
-  })
-})
+pinner.start()
 
 // From: https://nodejs.org/en/docs/guides/getting-started-guide/
 // Just to keep Zeit now from complaining
+
+const http = require('http')
 
 const hostname = '127.0.0.1'
 const port = 3010
