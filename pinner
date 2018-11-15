@@ -5,7 +5,7 @@ if (!process.env.DEBUG) {
   process.env.DEBUG = 'peer-star:pinner'
 }
 
-const Pinner = require('peer-star-app/src/pinner')
+const Pinner = require('@jimpick/peer-star-app-staging/src/pinner')
 
 const appName = process.argv[2]
 if (!appName) {
