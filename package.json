@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Deploy pinner to Zeit",
   "scripts": {
-    "start": "node ./pinner peer-pad-jim-staging /dns4/rendezvous.jimpick.com/tcp/9093/wss/p2p-websocket-star"
+    "start": "PEER_STAR_APP_NAME=peer-pad-jim-staging-2 PEER_STAR_SWARM_ADDRESS=/dns4/rendezvous.jimpick.com/tcp/9091/wss/p2p-websocket-star node ./pinner"
   },
   "keywords": [],
   "author": "Jim Pick (@jimpick)",
   "license": "MIT",
   "dependencies": {
-    "@jimpick/peer-star-app-staging": "^0.9.2-1"
+    "peer-star-app": "^0.10.3"
   },
   "engines": {
     "node": "^10.7.0"
